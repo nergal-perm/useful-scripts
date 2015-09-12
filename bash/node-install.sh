@@ -8,7 +8,8 @@ source ~/.profile
 
 # Устанавливаем последнюю версию nodejs
 nvm install stable
-nvm use stable
+echo "nvm use stable" >> ~/.bashrc
+source ~/.bashrc
 
 # Устанавливаем type script definitions
-nvm install -g tsd 
+npm install -g tsd 
