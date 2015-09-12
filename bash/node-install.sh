@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 # Устанавливаем node version manager
 sudo apt-get update
@@ -8,5 +8,7 @@ source ~/.profile
 
 # Устанавливаем последнюю версию nodejs
 nvm install stable
+nvm use stable
 
-# 
+# Устанавливаем type script definitions
+nvm install -g tsd 
