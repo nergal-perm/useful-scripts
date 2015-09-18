@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Rescue Time
+Type=Application
+Comment=Time logging service
+Exec=rescuetime
+StartupNotify=false
