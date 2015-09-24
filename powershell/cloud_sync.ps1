@@ -1,6 +1,5 @@
 Write-Host "Starting net services..."
 $PSScriptRoot = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition
-Write-Host $PSScriptRoot
 Invoke-Expression "$PSScriptRoot\start_net_services.ps1"
 
 $Proc = "googledrivesync"
