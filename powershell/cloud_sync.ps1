@@ -33,3 +33,17 @@ if ($Running -ne $null) {
     Stop-Process -ProcessName $Proc
     Write-Host "Dropbox has stopped."
 }
+
+$Proc = "DropboxUpdate"
+$Running = Get-Process $Proc -ErrorAction SilentlyContinue
+if ($Running -ne $null) {
+    Stop-Process -ProcessName $Proc
+    Write-Host "Dropbox has stopped."
+}
+
+$Proc = "GoogleUpdate"
+$Running = Get-Process $Proc -ErrorAction SilentlyContinue
+if ($Running -ne $null) {
+    Stop-Process -ProcessName $Proc
+    Write-Host "Dropbox has stopped."
+}

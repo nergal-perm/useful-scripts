@@ -1,7 +1,7 @@
 $Proc = "tor"
 $Running = Get-Process $Proc -ErrorAction SilentlyContinue
 if ($Running -eq $null) {
-    Start-Process -FilePath "D:\PortableApps\Tor\tor.exe" -WindowStyle Hidden
+    Start-Process -FilePath "D:\PortableApps\Tor\tor.cmd" -WindowStyle Hidden
     Write-Host "Tor is running..."
 }
 
