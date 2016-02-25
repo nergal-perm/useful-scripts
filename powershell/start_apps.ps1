@@ -33,11 +33,11 @@ if ($Running -eq $null) {
     Start-Process -FilePath "D:\PortableApps\Todo.txt\todotxt.exe"  -WorkingDirectory "D:\PortableApps\Todo.txt"
 }
 
-# запускаем Code
-$Proc = "code"
+# запускаем Atom
+$Proc = "atom"
 $Running = Get-Process $Proc -ErrorAction SilentlyContinue
 if ($Running -eq $null) {
-    Start-Process -FilePath "C:\Program Files (x86)\Microsoft VS Code\Code.exe"  -WorkingDirectory "C:\Program Files (x86)\Microsoft VS Code"
+    Start-Process -FilePath "D:\PortableApps\atom\Update.exe" -ArgumentList "--processStart atom.exe"  -WorkingDirectory "D:\PortableApps\atom\app-1.5.1"
 }
 
 # запускаем Far
