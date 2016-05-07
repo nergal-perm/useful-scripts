@@ -19,7 +19,7 @@ sudo apt-get -y install curl git geany
 echo "Do you wish to install rescuetime (automatic time logger)?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) source ~/Dev/useful-scripts/bash/rescuetime-setup.sh; break;;
+        Yes ) curl -s https://raw.githubusercontent.com/nergal-perm/useful-scripts/master/bash/rescuetime-setup.sh | bash; break;;
         No ) break;;
     esac
 done
