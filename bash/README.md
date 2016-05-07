@@ -2,14 +2,9 @@
 Скрипты, предназначенные для настройки "чистой" Ubuntu после (пере)установки.
 
 # Порядок использования
-Первым делом необходимо установить на машине утилиту curl
+Скачать и запустить основной скрипт установки:
 ```
-sudo apt-get install curl
-```
-
-Затем нужно скачать и запустить основной скрипт установки:
-```
-curl -s https://raw.githubusercontent.com/nergal-perm/useful-scripts/master/bash/system-setup.sh | bash
+source <(wget -q https://raw.githubusercontent.com/nergal-perm/useful-scripts/master/bash/system-setup.sh -O -)
 ```
 
 В ходе работы скрипта установки последовательно подтверждать или отказываться от установки отдельных компонент.
