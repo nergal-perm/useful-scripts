@@ -15,11 +15,13 @@ sudo apt-get -qq update
 # installing general tools
 sudo apt-get -y install curl git geany
 
+git clone https://github.com/nergal-perm/useful-scripts ~/Dev/useful-scripts
+
 # installing rescuetime
 echo "Do you wish to install rescuetime (automatic time logger)?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) curl -s https://raw.githubusercontent.com/nergal-perm/useful-scripts/master/bash/rescuetime-setup.sh | bash; break;;
+        Yes ) source ~/Dev/useful-scripts/bash/rescuetime-setup.sh; break;;
         No ) break;;
     esac
 done
