@@ -24,6 +24,15 @@ select yn in "Yes" "No"; do
     esac
 done
 
+# installing sublime-text
+echo "Do you wish to install sublime-text (lightweight text editor and IDE)?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) source <(wget -q https://raw.githubusercontent.com/nergal-perm/useful-scripts/master/bash/sublime-setup.sh -O -); break;;
+        No ) break;;
+    esac
+done
+
 # installing dropbox
 echo "Do you wish to install dropbox (cloud storage)?"
 select yn in "Yes" "No"; do
