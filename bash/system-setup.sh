@@ -13,7 +13,7 @@ echo "Updating packages list..."
 sudo apt-get -qq update
 
 # installing general tools
-sudo apt-get -y install git geany
+sudo apt-get -y install git guake
 
 # installing rescuetime
 echo "Do you wish to install rescuetime (automatic time logger)?"
