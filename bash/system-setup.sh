@@ -10,10 +10,10 @@ cd ~/Dev
 ## removing trailing partials for apt
 sudo rm -rf /var/lib/apt/lists/partial/*
 echo "Updating packages list..."
-sudo apt-get -qq update
+sudo apt -qq update
 
 # installing general tools
-sudo apt-get -y install git guake
+sudo apt -y install git guake
 
 # installing rescuetime
 echo "Do you wish to install rescuetime (automatic time logger)?"
@@ -37,7 +37,7 @@ done
 echo "Do you wish to install dropbox (cloud storage)?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) source ~/Dev/useful-scripts/bash/dropbox-setup.sh; break;;
+	    Yes ) source <(wget -q https://raw.githubusercontent.com/nergal-perm/useful-scripts/bash/dropbox-setup.sh -O -); break;;
         No ) break;;
     esac
 done
@@ -46,7 +46,7 @@ done
 echo "Do you wish to install todo.txt (plain text todo list)?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) source ~/Dev/useful-scripts/bash/todotxt-setup.sh; break;;
+	    Yes ) source <(wget -q https://raw.githubusercontent.com/nergal-perm/useful-scripts/bash/todotxt-setup.sh -O -); break;;
         No ) break;;
     esac
 done
