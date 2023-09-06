@@ -1,8 +1,9 @@
 #!/bin/bash
 
 today=`date +%Y%m%d%H%M`
-new_note="$PERSONAL_WIKI/$today $1.md"
-echo "Creating file $1"
+year=`date +%Y`
+new_note="$PERSONAL_WIKI/$year/$today $1.md"
+echo "Creating file $new_note"
 touch "$new_note"
 echo "---" >> "$new_note"
 echo "id: $today" >> "$new_note"
